@@ -5,7 +5,7 @@ Python implementation (both CPU and GPU version) to a model-based approach to th
 
 
 
-## Installation
+## 1. Installation
 
 You can install the released version of scAMACE from Github:
 
@@ -13,7 +13,7 @@ You can install the released version of scAMACE from Github:
 pip install git+https://github.com/WWJiaxuan/scAMACE_py.git#egg=scAMACE_py
 
 ```
-## Main Functions
+## 2. Main Functions
 
 `EM`: Expectation-maximization (EM) implementation on CPU of scAMACE.
 
@@ -25,5 +25,5 @@ pip install git+https://github.com/WWJiaxuan/scAMACE_py.git#egg=scAMACE_py
 `E_step_gpu`: Perform E-step (i.e. calculate the expectations of missing data) for one iteration in the EM algorithm on GPU.
 
 
-## Example
+## 3. Example
 Please refer to the [vigenette](https://https://github.com/cuhklinlab/scACE/tree/master/vignette) with several examples for a quick guide to scAMACE package.
