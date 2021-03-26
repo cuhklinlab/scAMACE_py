@@ -1,3 +1,5 @@
+# A quick guide to scAMACE_py
+
 ## 1. Datasets
 ### Application 1: K562-GM12878 dataset
 `Feb7_2021_3Types_Data_rna_mean_1000_ratio_f1.csv`: the known pdf f1 of scCAS data, cells by genes.
