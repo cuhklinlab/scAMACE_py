@@ -27,4 +27,4 @@ pip install git+https://github.com/cuhklinlab/scAMACE_py.git#egg=scAMACE_py
 
 
 ## 3. Datasets and Examples
-Please refer to the [vigenette](https://github.com/cuhklinlab/scAMACE_py/tree/main/vignette) with several examples for a quick guide to scAMACE package.
+Please refer to the [vigenette](https://github.com/cuhklinlab/scAMACE_py/blob/main/vignette/vignette.md) with several examples for a quick guide to scAMACE package.
