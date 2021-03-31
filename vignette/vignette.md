@@ -134,8 +134,10 @@ phi_rna = np.array([1/K]*K)
 phi_met =np.array([1/K]*K)
 
 
-w_exp = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_acc = w_exp.copy()
+w_exp = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
+w_acc = w_exp.copy()
 w_met = w_exp.copy()
+
 
 pi_rna = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_rna.csv',index_col=0).values
 pi_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv',index_col=0).values
@@ -331,8 +333,10 @@ phi_rna = np.array([1/K]*K)
 phi_met =np.array([1/K]*K)
 
 
-w_exp = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_acc = w_exp.copy()
+w_exp = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
+w_acc = w_exp.copy()
 w_met = w_exp.copy()
+
 
 pi_rna = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_rna.csv',index_col=0).values
 pi_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv',index_col=0).values
