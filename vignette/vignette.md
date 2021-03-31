@@ -2,10 +2,10 @@
 
 #### We present the usage of scAMACE_py in the following sections:
 #### [Section 1: Introduction to datasets (Application 1: K562-GM12878 dataset)](#section1)
-#### Section 2: scAMACE CPU version
-#### Section 3: scAMACE GPU version
-#### Section 4: scAMACE(seperate) CPU version
-#### Section 5: scAMACE(seperate) GPU version
+#### [Section 2: scAMACE CPU version](#section2)
+#### [Section 3: scAMACE GPU version](#section3)
+#### [Section 4: scAMACE(seperate) CPU version](#section4)
+#### [Section 5: scAMACE(seperate) GPU version](#section5)
 
 
 
@@ -40,7 +40,7 @@
 `Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv`: the initialization of the probability for sc-methylation data that gene g is methylated in cell d.
 
 
-## 2. Example of scAMACE CPU version
+## <a name="section2"></a>2. Example of scAMACE CPU version
 #### Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 2.1 Load data and prepare for EM algorithm
 ```{python}
@@ -239,7 +239,7 @@ pd.crosstab(met_cell_lb,mmp)
 
 
 
-## 3. Example of scAMACE GPU version
+## <a name="section3"></a>3. Example of scAMACE GPU version
 #### Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 3.1 Load data and prepare for EM algorithm
 ```{python}
@@ -472,7 +472,7 @@ pd.crosstab(met_cell_lb,mmp)
 ```
 
 
-## 4. Example of scAMACE (seperate) CPU version
+## <a name="section4"></a>4. Example of scAMACE (seperate) CPU version
 #### Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
 
 #### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.  (Beta regression is implemented by package 'betareg' in R, please refer to https://github.com/cuhklinlab/scAMACE/blob/main/vignette/vignette.md for more details.)
@@ -686,7 +686,7 @@ pd.crosstab(met_cell_lb,mmp)
 
 
 
-## 5. Example of scAMACE (seperate) GPU version
+## <a name="section5"></a>5. Example of scAMACE (seperate) GPU version
 #### Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
 
 #### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.  (Beta regression is implemented by package 'betareg' in R, please refer to https://github.com/cuhklinlab/scAMACE/blob/main/vignette/vignette.md for more details.)
