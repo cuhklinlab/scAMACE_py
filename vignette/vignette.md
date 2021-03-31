@@ -475,7 +475,7 @@ pd.crosstab(met_cell_lb,mmp)
 ## 4. Example of scAMACE (seperate) CPU version
 #### Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
 
-#### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.  (Beta regression is implemented by package `betareg' in R.)
+#### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.  (Beta regression is implemented by package 'betareg' in R, please refer to https://github.com/cuhklinlab/scAMACE/blob/main/vignette/vignette.md for more details.)
 
 ### 4.1 Load data and prepare for EM algorithm
 ```{python}
@@ -689,8 +689,7 @@ pd.crosstab(met_cell_lb,mmp)
 ## 5. Example of scAMACE (seperate) GPU version
 #### Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
 
-#### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.  (Beta regression is implemented by package `betareg' in R.)
-
+#### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.  (Beta regression is implemented by package 'betareg' in R, please refer to https://github.com/cuhklinlab/scAMACE/blob/main/vignette/vignette.md for more details.)
 
 ### 5.1 Load data and prepare for EM algorithm
 ```{python}
