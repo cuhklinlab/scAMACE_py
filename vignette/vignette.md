@@ -214,13 +214,13 @@ print(end - start)
 
 # amp, rmp and mmp are the cluster assignments offered by scAMACE
 # scCAS data
-amp = np.argmax(E_z_atac, axis=0)
+amp = torch.argmax(E_z_atac, dim=0)
 
 # scRNA-Seq data
-rmp = np.argmax(E_z_rna, axis=0)
+rmp = torch.argmax(E_z_rna, dim=0)
 
 # sc-methylation data
-mmp = np.argmax(E_z_met, axis=0)
+mmp = torch.argmax(E_z_met, dim=0)
 
 pd.crosstab(atac_cell_lb,amp)
 pd.crosstab(rna_cell_lb,rmp)
