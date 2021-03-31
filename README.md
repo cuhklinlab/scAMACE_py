@@ -6,7 +6,7 @@ Python implementation (both CPU and GPU version) to a model-based approach to th
 
 ## 1. Installation
 
-You can install the released version of scAMACE from Github:
+You can install the released version of scAMACE_py from Github:
 
 ```{python}
 pip install git+https://github.com/cuhklinlab/scAMACE_py.git#egg=scAMACE_py
