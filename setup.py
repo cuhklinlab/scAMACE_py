@@ -6,7 +6,7 @@ setuptools.setup(
     version='1.0',
     packages=setuptools.find_packages(where="scAMACE_py"),
     url='https://github.com/cuhklinlab/scAMACE_py',
-    # license='',
+    license='MIT',
     install_requires=['numpy','torch','scipy'],
     author='Zexuan SUN, Jiaxuan WANGWU',
     author_email='wwjiaxuan@link.cuhk.edu.hk',
