@@ -31,7 +31,7 @@
 `Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv`: the initialization of the probability for sc-methylation data that gene g is methylated in cell d.
 
 
-## 2. Example of CPU version
+## 2. Example of scAMACE CPU version
 ## Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 2.1 Load data and prepare for EM algorithm
 ```{python}
@@ -228,7 +228,7 @@ pd.crosstab(met_cell_lb,mmp)
 
 
 
-## 3. Example of GPU version
+## 3. Example of scAMACE GPU version
 ## Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 3.1 Load data and prepare for EM algorithm
 ```{python}
