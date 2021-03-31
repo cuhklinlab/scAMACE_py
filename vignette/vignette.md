@@ -41,7 +41,7 @@
 
 
 ## 2. Example of scAMACE CPU version
-## Remarks: We demostrate usage of scAMACE_py through Application 1.
+#### Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 2.1 Load data and prepare for EM algorithm
 ```{python}
 import scAMACE_py
@@ -240,7 +240,7 @@ pd.crosstab(met_cell_lb,mmp)
 
 
 ## 3. Example of scAMACE GPU version
-## Remarks: We demostrate usage of scAMACE_py through Application 1.
+#### Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 3.1 Load data and prepare for EM algorithm
 ```{python}
 import scAMACE_py
@@ -473,9 +473,9 @@ pd.crosstab(met_cell_lb,mmp)
 
 
 ## 4. Example of scAMACE (seperate) CPU version
-## Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
+#### Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
 
-## We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.
+#### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.
 
 ### 4.1 Load data and prepare for EM algorithm
 ```{python}
@@ -687,9 +687,9 @@ pd.crosstab(met_cell_lb,mmp)
 
 
 ## 5. Example of scAMACE (seperate) GPU version
-## Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
+#### Remarks: This section is the demostration of implementing scAMACE seperately on the three datasets using Application 1. 
 
-## We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.
+#### We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg}$, then we can further obtain \{$\hat{\eta}, \hat{\gamma}, \hat{\tau}, \hat{\delta}, \hat{\theta}, \hat{\phi}^{acc}, \hat{\phi}^{met}$\} by beta regression.
 
 
 ### 5.1 Load data and prepare for EM algorithm
