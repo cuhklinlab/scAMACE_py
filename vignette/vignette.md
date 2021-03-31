@@ -1,11 +1,12 @@
 # A quick guide to scAMACE_py
 
-### We present the usage of scAMACE_py in the following sections:
-### Section 1: Introduction to datasets (Application 1: K562-GM12878 dataset)
-### Section 2: scAMACE CPU version
-### Section 3: scAMACE GPU version
-### Section 4: scAMACE(seperate) CPU version
-### Section 5: scAMACE(seperate) GPU version
+#### We present the usage of scAMACE_py in the following sections:
+#### Section 1: Introduction to datasets (Application 1: K562-GM12878 dataset)
+#### Section 2: scAMACE CPU version
+#### Section 3: scAMACE GPU version
+#### Section 4: scAMACE(seperate) CPU version
+#### Section 5: scAMACE(seperate) GPU version
+
 
 
 ## 1. Datasets
