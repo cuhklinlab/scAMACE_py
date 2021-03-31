@@ -1,7 +1,7 @@
 # A quick guide to scAMACE_py
 
 #### We present the usage of scAMACE_py in the following sections:
-#### [1. Datasets] (#section1)
+#### [Section 1: Introduction to datasets (Application 1: K562-GM12878 dataset)] (#section1)
 #### Section 2: scAMACE CPU version
 #### Section 3: scAMACE GPU version
 #### Section 4: scAMACE(seperate) CPU version
