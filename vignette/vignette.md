@@ -1,7 +1,7 @@
 # A quick guide to scAMACE_py
 
 #### We present the usage of scAMACE_py in the following sections:
-#### [Section 1: Introduction to datasets (Application 1: K562-GM12878 dataset)] (#section1)
+#### [Section 1: Introduction to datasets (Application 1: K562-GM12878 dataset)](#section1)
 #### Section 2: scAMACE CPU version
 #### Section 3: scAMACE GPU version
 #### Section 4: scAMACE(seperate) CPU version
@@ -9,7 +9,7 @@
 
 
 
-## <a name="section1"></a> 1. Datasets
+## <a name="section1"></a>1. Datasets
 ### Application 1: K562-GM12878 dataset
 `Feb7_2021_3Types_Data_rna_mean_1000_ratio_f1.csv`: the known pdf f1 of scCAS data, cells by genes.
 
