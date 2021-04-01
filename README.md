@@ -28,3 +28,6 @@ pip install git+https://github.com/cuhklinlab/scAMACE_py.git#egg=scAMACE_py
 
 ## 3. Datasets and Examples
 Please refer to the [vigenette](https://github.com/cuhklinlab/scAMACE_py/blob/main/vignette/vignette.md) with several examples for a quick guide to scAMACE_py package.
+
+## 4. Reference
+Jiaxuan Wangwu, Zexuan Sun, Zhixiang Lin: scAMACE: Model-based approach to the joint analysis of single-cell data on chromatin accessibility, gene expression and methylation. [paper link](https://www.biorxiv.org/content/10.1101/2021.03.29.437485v1)
