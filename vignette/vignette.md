@@ -6,7 +6,7 @@
 #### [Section 3: scAMACE GPU version](#section3)
 #### [Section 4: scAMACE(seperate) CPU version](#section4)
 #### [Section 5: scAMACE(seperate) GPU version](#section5)
-
+#### [Section 6: Generate simulation data](#section6)
 
 
 ## <a name="section1"></a>1. Datasets
