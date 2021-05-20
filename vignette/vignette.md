@@ -44,7 +44,14 @@
 Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 2.1 Load data and prepare for EM algorithm
 ```{python}
+import torch
+import pandas as pd
+import numpy as np
+
 import scAMACE_py
+from scAMACE_py.model_based_torch_cpu import EM
+from scAMACE_py.model_based_torch_cpu import E_step
+
 
 folder = '/your_folder/'
 f1 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_f1.csv',index_col=0).values
@@ -143,14 +150,14 @@ phi_rna = np.array([1/K]*K)
 phi_met =np.array([1/K]*K)
 
 
-w_exp = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
+w_exp = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
 w_acc = w_exp.copy()
 w_met = w_exp.copy()
 
 
 pi_rna = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_rna.csv',index_col=0).values
 pi_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv',index_col=0).values
-qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_square_qi.csv',index_col=0).values[:,0]
+qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_qi.csv',index_col=0).values[:,0]
 
 
 phi_atac = torch.from_numpy(phi_atac)
