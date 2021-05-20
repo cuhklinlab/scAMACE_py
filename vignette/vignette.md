@@ -952,6 +952,61 @@ pd.crosstab(met_cell_lb,mmp)
 ```
 
 
+## <a name="section6"></a>6. Example of generating simulation data
+```{python}
+import numpy as np
+import scAMACE_py
+
+from scAMACE_py.generate_sim_data import generate_sim_data
+
+
+n_atac = 900
+n_rna = 1100
+n_met = 1000
+p = 1000
+
+prop = 0.05
+omega = 0.8
+
+K = 3
+#set some entries in Xprobs to be zeros to simulate the unequal numbers of clusters
+Xprobs1 = [1/3] * 3
+Xprobs2 = [1/3] * 3
+Xprobs3 = [1/3] * 3
+
+shape_rna = [7,1]
+scale_rna = [0.5,1]
+
+a_met = [0.5,1]
+b_met = [0.5,10]
+
+qi = 0.2
+pi_rna = [0.7,0.3]
+pi_met = [0.4,0.7]
+
+alpha1 = 2
+beta1 = 2
+
+phi_1 = 10
+eta = -1
+gamma = 7
+tau = -2
+
+phi_2 = 10
+delta = -2
+theta = 5
+
+
+sim_data = generate_sim_data(Xprobs1 = Xprobs1,Xprobs2 = Xprobs2, Xprobs3 = Xprobs3,
+	                     shape_rna = shape_rna, scale_rna = scale_rna, a_met = a_met, b_met = b_met,
+	                     qi = qi, pi_rna = pi_rna, pi_met = pi_met, alpha1 = alpha1, beta1 = beta1,
+	                     phi_1 = phi_1, eta = eta, gamma = gamma, tau = tau, phi_2 = phi_2, delta = delta,
+	                     theta = theta)
+
+
+
+```
+
 
 
 
