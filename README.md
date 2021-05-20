@@ -25,6 +25,8 @@ pip install git+https://github.com/cuhklinlab/scAMACE_py.git#egg=scAMACE_py
 
 `E_step_gpu`: Perform E-step (i.e. calculate the expectations of missing data) for one iteration in the EM algorithm on GPU.
 
+`generate_sim_data`: Generate simulation data $\boldsymbol x$, $\boldsymbol y$ and $\boldsymbol z$.
+
 
 ## 3. Datasets and Examples
 Please refer to the [vigenette](https://github.com/cuhklinlab/scAMACE_py/blob/main/vignette/vignette.md) with several examples for a quick guide to scAMACE_py package.
