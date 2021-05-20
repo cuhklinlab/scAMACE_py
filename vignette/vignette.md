@@ -250,7 +250,13 @@ pd.crosstab(met_cell_lb,mmp)
 Remarks: We demostrate usage of scAMACE_py through Application 1.
 ### 3.1 Load data and prepare for EM algorithm
 ```{python}
+import torch
+import pandas as pd
+import numpy as np
+
 import scAMACE_py
+from scAMACE_py.model_based_torch_gpu import EM_gpu
+from scAMACE_py.model_based_torch_gpu import E_step_gpu
 
 folder = '/your_folder/'
 f1 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_f1.csv',index_col=0).values
@@ -349,7 +355,7 @@ phi_rna = np.array([1/K]*K)
 phi_met =np.array([1/K]*K)
 
 
-w_exp = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
+w_exp = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
 w_acc = w_exp.copy()
 w_met = w_exp.copy()
 
