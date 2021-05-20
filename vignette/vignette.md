@@ -362,7 +362,7 @@ w_met = w_exp.copy()
 
 pi_rna = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_rna.csv',index_col=0).values
 pi_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv',index_col=0).values
-qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_square_qi.csv',index_col=0).values[:,0]
+qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_qi.csv',index_col=0).values[:,0]
 
 
 phi_atac = torch.from_numpy(phi_atac)
@@ -492,9 +492,18 @@ We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg
 
 ### 4.1 Load data and prepare for EM algorithm
 ```{python}
-import scAMACE_py
+import torch
+import pandas as pd
+import numpy as np
 
-folder = '/lustre/project/Stat/s1155116622/Real_data_final/Application1_1000features_rna_mean/'
+import scAMACE_py
+from scAMACE_py.model_based_sep_torch_cpu import EM_atac
+from scAMACE_py.model_based_sep_torch_cpu import cal_E_atac
+from scAMACE_py.model_based_sep_torch_cpu import EM_rna
+from scAMACE_py.model_based_sep_torch_cpu import cal_E
+from scAMACE_py.model_based_sep_torch_cpu import EM_met
+
+folder = '/your_folder/'
 f1 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_f1.csv',index_col=0).values
 f0 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_f0.csv',index_col=0).values
 g1 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_g1.csv',index_col=0).values
@@ -563,13 +572,13 @@ beta_qi = torch.tensor(beta_qi,dtype = torch.float64)
 
 # load initialization
 ###----------------------------------------------------------------------###
-w_exp = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
-w_acc = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_acc.csv',index_col=0).values
-w_met = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_met.csv',index_col=0).values
+w_exp = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
+w_acc = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_acc.csv',index_col=0).values
+w_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_met.csv',index_col=0).values
 
 pi_rna = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_rna.csv',index_col=0).values
 pi_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv',index_col=0).values
-qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_square_qi.csv',index_col=0).values[:,0]
+qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_qi.csv',index_col=0).values[:,0]
 
 
 phi_atac = torch.from_numpy(phi_atac)
@@ -706,9 +715,19 @@ We set K=1 to get $\omega^{acc}_{kg}$, $\omega^{rna}_{kg}$ and $\omega^{met}_{kg
 
 ### 5.1 Load data and prepare for EM algorithm
 ```{python}
-import scAMACE_py
+import torch
+import pandas as pd
+import numpy as np
 
-folder = '/lustre/project/Stat/s1155116622/Real_data_final/Application1_1000features_rna_mean/'
+import scAMACE_py
+from scAMACE_py.model_based_sep_torch_gpu import EM_atac_gpu
+from scAMACE_py.model_based_sep_torch_gpu import cal_E_atac_gpu
+from scAMACE_py.model_based_sep_torch_gpu import EM_rna_gpu
+from scAMACE_py.model_based_sep_torch_gpu import cal_E_gpu
+from scAMACE_py.model_based_sep_torch_gpu import EM_met_gpu
+
+
+folder = '/your_folder/'
 f1 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_f1.csv',index_col=0).values
 f0 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_f0.csv',index_col=0).values
 g1 = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_g1.csv',index_col=0).values
@@ -777,14 +796,14 @@ beta_qi = torch.tensor(beta_qi,dtype = torch.float64)
 
 # load initialization
 ###----------------------------------------------------------------------###
-w_exp = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
-w_acc = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_acc.csv',index_col=0).values
-w_met = pd.read_csvpd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_met.csv',index_col=0).values
+w_exp = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_exp.csv',index_col=0).values 
+w_acc = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_acc.csv',index_col=0).values
+w_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_w_met.csv',index_col=0).values
 
 
 pi_rna = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_rna.csv',index_col=0).values
 pi_met = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_pi_met.csv',index_col=0).values
-qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_square_qi.csv',index_col=0).values[:,0]
+qi = pd.read_csv(folder + 'Feb7_2021_3Types_Data_rna_mean_1000_ratio_mcmc_ini_qi.csv',index_col=0).values[:,0]
 
 
 w_exp = torch.from_numpy(w_exp)
