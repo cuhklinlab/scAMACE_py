@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: scAMACE-py
+Version: 1.0
+Summary: scAMACE(integrative Analysis of single-cell Methylation, chromatin ACcessibility, and gene Expression) python implementation, a model-based approach to the joint analysis of single-cell data on chromatin accessibility, gene expression and methylation.
+Home-page: https://github.com/WWJiaxuan/scAMACE_py
+Author: Zexuan SUN, Jiaxuan WANGWU
+Author-email: wwjiaxuan@link.cuhk.edu.hk
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
